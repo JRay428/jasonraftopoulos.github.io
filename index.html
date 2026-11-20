@@ -523,6 +523,24 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* Coming soon + short films */
+  .coming-soon { margin-bottom:2.5rem; background:transparent; color:var(--ink); padding:2.5rem 3rem; border:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; gap:2rem; flex-wrap:wrap; }
+  .coming-soon .cs-label { font-family:var(--sans); font-size:0.7rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-light); }
+  .coming-soon h2 { font-family:var(--serif); font-weight:400; font-style:italic; font-size:clamp(1.8rem,4vw,2.6rem); line-height:1.1; margin-top:0.8rem; }
+  .coming-soon .cs-status { font-family:var(--sans); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-mid); white-space:nowrap; }
+  .shorts { margin-top:4rem; }
+  .shorts-list { list-style:none; border-top:1px solid var(--rule); }
+  .shorts-list li { display:grid; grid-template-columns:6rem 1fr auto; gap:1.5rem; align-items:baseline; padding:1.4rem 0; border-bottom:1px solid var(--rule); }
+  .shorts-list .s-year { font-family:var(--sans); font-size:0.75rem; letter-spacing:0.1em; color:var(--ink-light); }
+  .shorts-list .s-title { font-family:var(--serif); font-style:italic; font-size:1.2rem; }
+  .shorts-list .s-type { display:block; font-family:var(--sans); font-style:normal; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-light); margin-top:0.3rem; }
+  .shorts-list .s-note { font-family:var(--sans); font-size:0.75rem; font-weight:300; color:var(--ink-mid); letter-spacing:0.04em; text-align:right; }
+  @media (max-width: 760px) {
+    .coming-soon { padding:2rem; }
+    .shorts-list li { grid-template-columns:1fr; gap:0.3rem; }
+    .shorts-list .s-note { text-align:left; }
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -584,6 +602,8 @@
       Venice International Film Festival, 2017
       <strong style="margin-top:0.8rem;">Voices in Deep</strong>
       MIFF &nbsp;·&nbsp; SXSW Sydney &nbsp;·&nbsp; Thessaloniki, 2023
+      <strong style="margin-top:0.8rem;">The Haunting of Anastasia Black</strong>
+      In Post-Production
     </div>
     <div class="scroll-cue">Scroll</div>
   </div>
@@ -593,6 +613,16 @@
 <section id="films">
   <div class="section-inner">
     <p class="section-label">Films</p>
+
+    <!-- Coming soon -->
+    <div class="coming-soon reveal">
+      <div>
+        <p class="cs-label">Coming Soon &nbsp;·&nbsp; Feature Film</p>
+        <h2>The Haunting of<br>Anastasia Black</h2>
+      </div>
+      <p class="cs-status">In Post-Production</p>
+    </div>
+
     <div class="films-grid reveal">
 
       <div class="film-card">
@@ -639,13 +669,36 @@
 
     </div>
 
-    <!-- Early work -->
-    <div style="margin-top:1px; background:var(--cream); border:1px solid var(--rule); border-top:none; padding:2rem 3rem; display:flex; justify-content:space-between; align-items:center;" class="reveal">
-      <div>
-        <span style="font-family:var(--sans);font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-light);">Short Documentary · 2010</span>
-        <p style="font-family:var(--serif);font-style:italic;font-size:1.1rem;margin-top:0.4rem;">From Dope to Dalai Lama</p>
-      </div>
-      <p style="font-family:var(--sans);font-size:0.75rem;font-weight:300;color:var(--ink-mid);letter-spacing:0.06em;">Best Short Documentary · Inside Film Awards</p>
+    <!-- Short films -->
+    <div class="shorts reveal" id="shorts">
+      <p class="section-label">Short Films</p>
+      <ul class="shorts-list">
+        <li>
+          <span class="s-year">2016</span>
+          <span class="s-title"><a href="https://www.imdb.com/title/tt5705406/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Kin</a><span class="s-type">Short Film</span></span>
+          <span class="s-note"></span>
+        </li>
+        <li>
+          <span class="s-year">2011</span>
+          <span class="s-title"><a href="https://www.imdb.com/title/tt1870394/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Father's Day</a><span class="s-type">Short Film</span></span>
+          <span class="s-note"></span>
+        </li>
+        <li>
+          <span class="s-year">2010</span>
+          <span class="s-title"><a href="https://www.imdb.com/title/tt1789766/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">From Dope to Dalai Lama</a><span class="s-type">Short Documentary</span></span>
+          <span class="s-note">Best Short Documentary · Inside Film Awards</span>
+        </li>
+        <li>
+          <span class="s-year">2009</span>
+          <span class="s-title"><a href="https://www.imdb.com/title/tt1582221/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Marti</a><span class="s-type">Short Film</span></span>
+          <span class="s-note"></span>
+        </li>
+        <li>
+          <span class="s-year">2008</span>
+          <span class="s-title">The Perfect Spin<span class="s-type">Short Documentary</span></span>
+          <span class="s-note"></span>
+        </li>
+      </ul>
     </div>
 
   </div>
@@ -660,13 +713,18 @@
       <div class="about-sidebar reveal">
         <h2>Greek-Australian.<br>Filmmaker.</h2>
         <ul class="awards-list">
-          <li>Jury Grand Prix, Best Film <span>Festival des Antipodes, Saint-Tropez · 2018</span></li>
-          <li>Best Director <span>Barcelona International Film Festival · 2018</span></li>
-          <li>Nominated, Lion of the Future <span>Venice International Film Festival · 2017</span></li>
-          <li>Nominated, Best Film (Orizzonti) <span>Venice International Film Festival · 2017</span></li>
+          <li>Jury Grand Prix, Best Feature Film <span>Festival des Antipodes, Saint-Tropez · 2018</span></li>
+          <li>Best Director (El Rey Award) <span>Barcelona International Film Festival · 2018</span></li>
+          <li>Best Short Documentary <span>Inside Film Awards · 2010</span></li>
+          <li>Nominated, Best Film (Discoveries) <span>Asian Film Festival Barcelona · 2024</span></li>
+          <li>Nominated, Best Feature Film <span>SXSW Sydney · 2023</span></li>
+          <li>Nominated, Golden Aphrodite, Best Feature Film <span>Cyprus International Film Festival · 2019</span></li>
+          <li>Nominated, Best Screenplay <span>Australian Film Critics Association · 2019</span></li>
           <li>Nominated, Best Director <span>Australian Directors' Guild · 2018</span></li>
           <li>Nominated, Best Independent Film <span>AACTA · 2018</span></li>
-          <li>Best Short Documentary <span>Inside Film Awards · 2010</span></li>
+          <li>Nominated, Lion of the Future <span>Venice International Film Festival · 2017</span></li>
+          <li>Nominated, Best Film (Orizzonti) <span>Venice International Film Festival · 2017</span></li>
+          <li>Nominated, Grand Prix <span>Bratislava International Film Festival · 2017</span></li>
         </ul>
       </div>
 
@@ -681,7 +739,7 @@
 
         <p>His second feature, Voices in Deep (2023) — starring Angeliki Papoulia (Dogtooth, 2009; The Lobster, 2015) — premiered at the Melbourne International Film Festival and went on to screen in competition at SXSW Sydney and the Thessaloniki International Film Festival. Shot in Athens, the film approaches the refugee crisis not through spectacle but through individual lives, using static framing and meticulous sound design to hold the viewer inside moments of private endurance. Critics responded to what Letterboxd's Richard Webber described as a supremely humane, rigorous and originally constructed view on the personal cost of the refugee crisis. The Greek Herald praised its breathtaking cinematography and its sensitivity in exploring inner voices and human connection.</p>
 
-        <p>Raftopoulos is currently developing multiple international projects under the banner of Small Village Films. He is based in Melbourne, Australia.</p>
+        <p>His next film, The Haunting of Anastasia Black, is in post-production. Raftopoulos is also developing multiple international projects under the banner of Small Village Films. He is based in Melbourne, Australia.</p>
       </div>
 
     </div>
@@ -784,6 +842,10 @@
           <li>
             <span>Instagram</span>
             <a href="https://instagram.com/jasonraftopoulos" target="_blank">@jasonraftopoulos</a>
+          </li>
+          <li>
+            <span>IMDb</span>
+            <a href="https://www.imdb.com/name/nm2174264/" target="_blank" rel="noopener">Jason Raftopoulos</a>
           </li>
         </ul>
       </div>
