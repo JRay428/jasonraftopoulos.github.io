@@ -541,6 +541,15 @@
     .shorts-list .s-note { text-align:left; }
   }
 
+  /* Interviews */
+  #interviews .reveal { border-top:1px solid var(--rule); }
+  .interview { display:grid; grid-template-columns:14rem 1fr auto; gap:1.5rem; align-items:baseline; padding:1.6rem 0; border-bottom:1px solid var(--rule); }
+  .interview h3 { font-family:var(--serif); font-style:italic; font-weight:400; font-size:1.25rem; }
+  .interview p { font-family:var(--serif); font-size:1rem; color:var(--ink-mid); line-height:1.6; }
+  .interview a { font-family:var(--sans); font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink) !important; white-space:nowrap; border-bottom:1px solid var(--rule); padding-bottom:2px; justify-self:start; }
+  .interview a:hover { border-color:var(--ink); }
+  @media (max-width: 760px) { .interview { grid-template-columns:1fr; gap:0.5rem; } }
+
   .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -807,9 +816,19 @@
         <a href="https://www.thecurb.com.au/voices-in-deep-interview-jason-raftopoulos/" target="_blank" style="text-decoration:none; color:inherit;">Read interview</a>
       </div>
       <div class="interview">
+        <h3>SBS Greek</h3>
+        <p>A radio conversation with Panos Apostolou on <em>Voices in Deep</em> and Greece's migration crisis.</p>
+        <a href="https://www.sbs.com.au/language/greek/en/podcast-episode/punch-in-the-stomach-raftopoulos-new-film-outlines-greeces-migration-crisis/ofwerq0c9" target="_blank" style="text-decoration:none; color:inherit;">Listen to interview</a>
+      </div>
+      <div class="interview">
         <h3>PopMatters</h3>
         <p>On Aristotelian storytelling, theme, and the ruthless demands of the director's chair.</p>
         <a href="https://www.popmatters.com/west-of-sunshine-jason-raftopoulos-2561469309.html" target="_blank" style="text-decoration:none; color:inherit;">Read interview</a>
+      </div>
+      <div class="interview">
+        <h3>FilmInk</h3>
+        <p>On making <em>West of Sunshine</em>.</p>
+        <a href="https://www.filmink.com.au/jason-raftopoulos-damian-hill-talk-west-sunshine/" target="_blank" style="text-decoration:none; color:inherit;">Read interview</a>
       </div>
       <div class="interview">
   <h3>Greek Herald</h3>
